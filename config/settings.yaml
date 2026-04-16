@@ -1,0 +1,18 @@
+emdn:
+  version: "v2"
+  language: "EN"
+
+  source:
+    type: "file"
+    url: "https://webgate.ec.europa.eu/dyna2/emdn/build/EMDN%20V2_EN.xlsx"
+    local_path: "data/raw/emdn_v2/emdn_v2.xlsx"
+    sheet_name: "EMDN"
+
+analysis:
+  aggregate_level: "BASIC_UDI"
+  only_latest_version: true
+  only_placed_on_market: true
+
+safety:
+  max_pages: 500000
+  page_delay_seconds: 0.1
