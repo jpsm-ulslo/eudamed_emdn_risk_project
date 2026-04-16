@@ -46,51 +46,52 @@ and MUST NOT be used as regulatory classification under MDR/IVDR Annex VIII.
 
 ## Project Structure
 
+```text
 eudamed_emdn_risk_project/
-|
-|-- README.md
-|-- requirements.txt
-|
-|-- config/
-|   |-- api_endpoints.yaml
-|   |-- settings.yaml
-|
-|-- data/
-|   |-- raw/
-|   |   |-- emdn_v2/
-|   |   |   |-- emdn_v2.csv
-|   |   |-- eudamed_test/
-|   |       |-- udi_all_test.json
-|   |
-|   |-- processed/
-|   |   |-- basic_udi_normalized.csv
-|   |   |-- basic_udi_with_risk.csv
-|   |
-|   |-- analytics/
-|       |-- emdn_risk_distribution.csv
-|
-|-- src/
-|   |-- __init__.py
-|   |-- ingest/
-|   |   |-- __init__.py
-|   |   |-- download_emdn_v2.py
-|   |   |-- download_udi.py
-|   |
-|   |-- transform/
-|   |   |-- __init__.py
-|   |   |-- normalize_basic_udi.py
-|   |   |-- normalize_risk_class.py
-|   |
-|   |-- analysis/
-|   |   |-- __init__.py
-|   |   |-- compute_emdn_risk_distribution.py
-|   |
-|   |-- utils/
-|       |-- __init__.py
-|       |-- pagination.py
-|       |-- logging.py
-|
-|-- run_pipeline.py
+├── README.md
+├── requirements.txt
+├── run_pipeline.py
+│
+├── config/
+│   ├── api_endpoints.yaml
+│   └── settings.yaml
+│
+├── data/
+│   ├── raw/
+│   │   ├── emdn_v2/
+│   │   │   └── emdn_v2.xlsx
+│   │   └── eudamed_test/
+│   │       └── udi_all_test.json
+│   │
+│   ├── processed/
+│   │   ├── emdn_v2_normalized.csv
+│   │   ├── basic_udi_normalized.csv
+│   │   └── basic_udi_with_risk.csv
+│   │
+│   └── analytics/
+│       └── emdn_risk_distribution.csv
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── ingest/
+│   │   ├── __init__.py
+│   │   ├── download_emdn_v2.py
+│   │   └── download_udi.py
+│   │
+│   ├── transform/
+│   │   ├── __init__.py
+│   │   ├── normalize_basic_udi.py
+│   │   └── normalize_risk_class.py
+│   │
+│   ├── analysis/
+│   │   ├── __init__.py
+│   │   └── compute_emdn_risk_distribution.py
+│   │
+│   └── utils/
+│       ├── __init__.py
+│       ├── pagination.py
+│       └── logging.py
 
 ---
 
