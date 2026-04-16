@@ -27,7 +27,6 @@ and MUST NOT be used as regulatory classification under MDR/IVDR Annex VIII.
 
 - EUDAMED Public API
   - TEST environment (full pagination supported for UDI‑DI)
-  - PROD environment (UDI‑DI hard‑capped; full enumeration not possible)
 - European Medical Device Nomenclature (EMDN v2)
   - Official taxonomy published by the European Commission
 
@@ -94,11 +93,12 @@ eudamed_emdn_risk_project/
 │       └── logging.py
 ```
 
+---
 
 ## Configuration
 
 config/api_endpoints.yaml defines:
-- Active environment (TEST or PROD)
+- Active environment (TEST)
 - Base URLs
 - API versions
 - Endpoint paths
@@ -109,8 +109,6 @@ config/settings.yaml defines:
 - Safety limits (maximum pages, pagination delay)
 - Minimum sample thresholds per EMDN
 
-No script hard‑codes API URLs.
-
 ---
 
 ## Environment Notes
@@ -118,10 +116,6 @@ No script hard‑codes API URLs.
 TEST:
 - /eudamed/udi fully paginates using nextLink
 - Complete UDI‑DI universe can be extracted
-
-PROD:
-- /eudamed/udi is hard‑capped
-- Full enumeration is NOT possible
 
 This project is intended to run in TEST.
 
