@@ -92,8 +92,8 @@ eudamed_emdn_risk_project/
 │       ├── __init__.py
 │       ├── pagination.py
 │       └── logging.py
-``
----
+```
+
 
 ## Configuration
 
